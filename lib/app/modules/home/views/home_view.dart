@@ -77,7 +77,7 @@ class HomeView extends GetView<HomeController> {
                       '/game-field',
                     ),
                     child: const Text(
-                      "To game_field",
+                      "To game",
                       style: TextStyle(fontSize: 18),
                     ),
                   ),

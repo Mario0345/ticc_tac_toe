@@ -22,7 +22,7 @@ class EnterNicknameView extends GetView<EnterNicknameController> {
               height: 30,
               child: TextField(
                 style: TextStyle(color: Colors.red),
-                decoration: InputDecoration(hintText: "enter nickname"),
+                decoration: InputDecoration(hintText: "nickname"),
               ),
             ),
             const SizedBox(
@@ -36,11 +36,18 @@ class EnterNicknameView extends GetView<EnterNicknameController> {
                   child: const Text("Submit"),
                 ),
                 const SizedBox(
-                  width: 20,
+                  width: 10,
                 ),
                 ElevatedButton(
                   onPressed: () => Get.toNamed("/rooms"),
                   child: const Text("To rooms"),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                 ElevatedButton(
+                  onPressed: () => Get.toNamed("/game-field"),
+                  child: const Text("To game"),
                 ),
               ],
             ),
