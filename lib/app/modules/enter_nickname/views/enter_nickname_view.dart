@@ -13,10 +13,38 @@ class EnterNicknameView extends GetView<EnterNicknameController> {
         title: const Text('EnterNicknameView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'EnterNicknameView is working',
-          style: TextStyle(fontSize: 20),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(
+              width: 200,
+              height: 30,
+              child: TextField(
+                style: TextStyle(color: Colors.red),
+                decoration: InputDecoration(hintText: "enter nickname"),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () => {},
+                  child: const Text("Submit"),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                ElevatedButton(
+                  onPressed: () => Get.toNamed("/rooms"),
+                  child: const Text("To rooms"),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
