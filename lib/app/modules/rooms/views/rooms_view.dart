@@ -13,11 +13,11 @@ class RoomsView extends GetView<RoomsController> {
         title: const Text('RoomsView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'RoomsView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Container(
+        width: 500,
+        child: ListView.builder(
+          itemBuilder: ((context, index) {} )
+          ),
       ),
     );
   }
