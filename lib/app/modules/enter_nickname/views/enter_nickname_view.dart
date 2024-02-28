@@ -17,12 +17,13 @@ class EnterNicknameView extends GetView<EnterNicknameController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
+            SizedBox(
               width: 200,
               height: 30,
               child: TextField(
-                style: TextStyle(color: Colors.red),
-                decoration: InputDecoration(hintText: "nickname"),
+                controller: controller.textFieldCtrl,
+                style:const TextStyle(color: Colors.red),
+                decoration:const InputDecoration(hintText: "nickname"),
               ),
             ),
             const SizedBox(
@@ -32,7 +33,7 @@ class EnterNicknameView extends GetView<EnterNicknameController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () => {},
+                  onPressed: () => controller.auth(),
                   child: const Text("Submit"),
                 ),
                 const SizedBox(

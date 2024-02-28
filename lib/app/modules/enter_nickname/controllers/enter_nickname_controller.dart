@@ -1,23 +1,13 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class EnterNicknameController extends GetxController {
   //TODO: Implement EnterNicknameController
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
+   var textFieldCtrl = TextEditingController(); 
+}
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+auth() async {
+  String nickname = textFieldCtrl.text;
+  var regReasult = await NetworkService.registration(nickname);
 }
